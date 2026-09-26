@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Abraham Alba Rivero — 1º DAM · IES Simarro</title>
+  <meta name="description" content="Web personal de David Abraham Alba Rivero, alumno de 1º de DAM en el IES Simarro. Proyectos personales, Débora IA, historia, aficiones y ambiciones.">
+  <meta name="author" content="David Abraham Alba Rivero">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Marcellus&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
+  <!-- APLICAR TEMA ANTES DE PINTAR: lee localStorage (o el sistema) y pone la clase «dark» si toca -->
+  <script>
+  (function(){document.documentElement.classList.add('w-js');try{var s=localStorage.getItem('daar-theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
+  </script>
+</head>
+<body>
+
+  <!-- Fondo ambiental: tres luces de color muy suaves que se desplazan despacio (ver .aurora en style.css) -->
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- FORMAS DE «THE SPOT»: manchas de tinta con salpicaduras. Se reutilizan con <use> en cada agujero.
+       El filtro spot-ink rompe el borde para que parezca tinta y no un círculo perfecto. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="spot-ink" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03 0.05" numOctaves="2" seed="7" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+
+      <g id="spot-a">
+        <path d="M161.4 108.6C161.5 117.9 161.7 130.6 156.6 137.7C151.4 144.9 139 146.3 130.5 151.7C122.1 157 114.8 168.4 105.9 169.7C97 171.1 87.6 162.5 77.2 159.8C66.8 157.1 48.8 160.6 43.4 153.6C37.9 146.6 46.2 128.1 44.8 117.6C43.3 107.2 35.4 100.4 34.6 90.8C33.9 81.2 34.3 67.1 40.1 60C45.9 53 60.5 53 69.5 48.3C78.5 43.7 85.5 33.3 94.2 32.2C103 31.2 112.2 39.2 122.1 42.1C132 44.9 148.1 42.5 153.7 49.1C159.4 55.8 154.9 72.1 156.2 82C157.5 92 161.3 99.3 161.4 108.6Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35" transform="translate(100 100) rotate(5) scale(1.06) translate(-100 -100)"/>
+        <path d="M161.4 108.6C161.5 117.9 161.7 130.6 156.6 137.7C151.4 144.9 139 146.3 130.5 151.7C122.1 157 114.8 168.4 105.9 169.7C97 171.1 87.6 162.5 77.2 159.8C66.8 157.1 48.8 160.6 43.4 153.6C37.9 146.6 46.2 128.1 44.8 117.6C43.3 107.2 35.4 100.4 34.6 90.8C33.9 81.2 34.3 67.1 40.1 60C45.9 53 60.5 53 69.5 48.3C78.5 43.7 85.5 33.3 94.2 32.2C103 31.2 112.2 39.2 122.1 42.1C132 44.9 148.1 42.5 153.7 49.1C159.4 55.8 154.9 72.1 156.2 82C157.5 92 161.3 99.3 161.4 108.6Z"
+              id="spot-a-body" fill="currentColor"/>
+        <g id="spot-a-drops" fill="currentColor"><circle cx="168.9" cy="42.1" r="9"/><circle cx="188.8" cy="58.6" r="4"/><ellipse cx="193.1" cy="86.9" rx="10.8" ry="6" transform="rotate(-8 193.1 86.9)"/><circle cx="182.7" cy="130.1" r="3.5"/><circle cx="29.5" cy="159.1" r="5"/><circle cx="7.3" cy="124.8" r="3"/><ellipse cx="22.1" cy="63.7" rx="12.8" ry="8" transform="rotate(205 22.1 63.7)"/><circle cx="46.1" cy="23" r="3.5"/><ellipse cx="116.8" cy="195.5" rx="7.7" ry="4.5" transform="rotate(80 116.8 195.5)"/><circle cx="76.7" cy="186.9" r="2.5"/></g>
+      </g>
+
+      <g id="spot-b">
+        <path d="M164 84C164.7 95.5 160 105.2 157.7 116.5C155.3 127.8 157 144.2 150 151.8C143 159.4 127.5 157.9 115.5 162.1C103.5 166.3 88 180.1 77.9 176.9C67.9 173.7 62.7 153.1 55.4 143.1C48.1 133 35.9 126.3 34 116.5C32.2 106.6 41.4 95.1 44.2 84C47.1 72.9 44.7 57.7 51.4 49.6C58 41.6 73.1 37.3 84 36C94.9 34.6 105.2 39.4 116.8 41.4C128.5 43.4 146.1 40.8 154 47.9C161.8 55 163.4 72.6 164 84Z"
+              fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35" transform="translate(100 100) rotate(-6) scale(1.07) translate(-100 -100)"/>
+        <path d="M164 84C164.7 95.5 160 105.2 157.7 116.5C155.3 127.8 157 144.2 150 151.8C143 159.4 127.5 157.9 115.5 162.1C103.5 166.3 88 180.1 77.9 176.9C67.9 173.7 62.7 153.1 55.4 143.1C48.1 133 35.9 126.3 34 116.5C32.2 106.6 41.4 95.1 44.2 84C47.1 72.9 44.7 57.7 51.4 49.6C58 41.6 73.1 37.3 84 36C94.9 34.6 105.2 39.4 116.8 41.4C128.5 43.4 146.1 40.8 154 47.9C161.8 55 163.4 72.6 164 84Z"
+              id="spot-b-body" fill="currentColor"/>
+        <g id="spot-b-drops" fill="currentColor"><ellipse cx="146" cy="20.3" rx="11.9" ry="7" transform="rotate(-60 146 20.3)"/><circle cx="170" cy="30" r="3.5"/><circle cx="189.7" cy="92.2" r="4.5"/><circle cx="182.3" cy="147.5" r="8"/><circle cx="150.5" cy="172.1" r="3"/><ellipse cx="60.7" cy="184.3" rx="9.6" ry="6" transform="rotate(115 60.7 184.3)"/><circle cx="15.1" cy="149" r="3.5"/><circle cx="11.4" cy="84.4" r="7.5"/><circle cx="21.4" cy="44.9" r="3"/><ellipse cx="76.4" cy="12.1" rx="9" ry="5" transform="rotate(255 76.4 12.1)"/><circle cx="114.9" cy="15.3" r="2.8"/></g>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- Grano de textura global -->
+  <div class="grain" aria-hidden="true"></div>
+  <!-- Halo frío que sigue al cursor -->
+  <div class="glow" aria-hidden="true"></div>
+
+  <!-- Enlace de salto (accesibilidad) -->
+  <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- ===== BARRA SUPERIOR FIJA + PROGRESO DE LECTURA ===== -->
+  <header class="topbar" id="topbar">
+  <div class="topbar__in">
+    <a href="#inicio" class="mark"><span class="mark__dot" aria-hidden="true"></span> D.A.A.R.</a>
+    <nav class="nav" aria-label="Navegación principal" data-i18n-aria-label="nav.aria">
+      <a href="#proyectos" class="nav__link" data-i18n="nav.projects">Proyectos</a>
+      <a href="#historia" class="nav__link" data-i18n="nav.story">Historia</a>
+      <a href="#datos" class="nav__link" data-i18n="nav.hobbies">Hobbies</a>
+      <a href="#ambiciones" class="nav__link" data-i18n="nav.ambitions">Ambiciones</a>
+      <a href="contacto.html" class="nav__link nav__link--cta" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <!-- HERRAMIENTAS: idioma + tema. El JS las enlaza por id (langBtn / themeBtn) -->
+    <div class="topbar__tools">
+      <!-- BOTÓN DE IDIOMA (ES/EN) -->
+      <button class="theme-btn lang-btn" id="langBtn" type="button" aria-label="Traducir al inglés" title="Traducir al inglés">
+        <span class="theme-btn__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.4 5.7 12 3z"/></svg>
+        </span>
+      </button>
+      <!-- BOTÓN DE TEMA (claro/oscuro). El JS lo enlaza por id="themeBtn" -->
+      <button class="theme-btn" id="themeBtn" type="button" aria-pressed="false" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="theme-btn__ico" aria-hidden="true">
+          <!-- Luna: se ve en modo claro (invita a ir a oscuro) -->
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <!-- Sol: se ve en modo oscuro (invita a ir a claro) -->
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== CABECERA / PRESENTACIÓN ===== -->
+    <section class="masthead" id="inicio" aria-labelledby="nombre">
+      <!-- Agujero tipo The Spot (cabecera). Ajusta --x --y --s --rot a tu gusto.
+           data-secret="hint": esta es la mancha que, al pasar el ratón, suelta la pista
+           del secreto (ver secret-hunt.js). -->
+      <div class="spots" aria-hidden="true"><span class="spot" data-secret="hint" style="--x:82%;--y:27%;--s:260px;--rot:-10deg"><span class="spot__hole"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#spot-a" filter="url(#spot-ink)"/></svg></span><span class="secret-bubble" id="secretBubble" role="status"><span data-i18n="secret.hint">Todos tenemos secretos, incluso esta página tiene un secreto&hellip;</span></span></span></div>
+      <div class="wrap masthead__grid">
+
+        <div class="masthead__lead">
+          <p class="eyebrow">
+            <span class="eyebrow__tick" aria-hidden="true"></span>
+            <span data-i18n="hero.eyebrow">Ficha personal</span> · <span id="clock">--:--</span> · Málaga, ES
+          </p>
+
+          <!-- Título principal (el nombre no se traduce) -->
+          <h1 class="name" id="nombre">
+            <span class="name__line" data-scramble>David Abraham</span>
+            <span class="name__line name__line--ital" data-scramble>Alba Rivero</span>
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="masthead__role" data-i18n="hero.role">Alumno del ciclo de <strong>1º DAM</strong> del IES Simarro</p>
+
+          <p class="masthead__statement reveal" data-i18n="hero.statement">Construyo software y aprendo por curiosidad. Ahora mismo, desarrollando con ayuda de IA mi propio agente conversacional y coleccionando aficiones que nunca terminé de abandonar.</p>
+
+          <div class="masthead__actions reveal">
+            <a href="#proyectos" class="btn btn--solid" data-i18n="hero.cta.projects">Ver proyectos</a>
+            <!-- El archivo cv.pdf debe estar en la misma carpeta que index.html -->
+            <a href="cv.pdf" class="btn" download data-i18n="hero.cta.cv">Descargar CV <span aria-hidden="true">↓</span></a>
+            <a href="contacto.html" class="btn" data-i18n="hero.cta.contact">Escríbeme <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <!-- Ficha técnica lateral -->
+        <aside class="ficha reveal" aria-label="Datos rápidos" data-i18n-aria-label="ficha.aria">
+          <h2 class="ficha__title" data-i18n="ficha.title">Ficha</h2>
+          <dl class="bento">
+            <div class="widget w-2" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c3 2 9 2 12 0v-4.5"/></svg></span><dt data-i18n="dt.studies">Formación</dt><dd>1º DAM · IES Simarro</dd></div>
+            <div class="widget w-accent" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2c.6 5.6 4.4 9.4 10 10-5.6.6-9.4 4.4-10 10-.6-5.6-4.4-9.4-10-10 5.6-.6 9.4-4.4 10-10z"/></svg></span><dt data-i18n="dt.project">Proyecto</dt><dd class="g-text">Débora IA</dd></div>
+            <div class="widget" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><dt data-i18n="dt.model">Modelo</dt><dd>Qwen 3.6 14B</dd></div>
+            <div class="widget" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></span><dt data-i18n="dt.voice">Voz</dt><dd>ElevenLabs API</dd></div>
+            <div class="widget" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><dt data-i18n="dt.status">Estado</dt><dd><span class="pulse" data-i18n="ficha.status">Abierto a aprender</span></dd></div>
+            <div class="widget w-2" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg></span><dt data-i18n="dt.instruments">Instrumentos</dt><dd data-i18n="ficha.instruments">Batería · Piano · Guitarra · Percusión · Ukelele</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <!-- Cinta de intereses (el JS genera la versión en inglés) -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track" data-i18n="ticker">
+          <span>Inteligencia artificial</span><i>◇</i><span>Python</span><i>◇</i><span>Batería</span><i>◇</i><span>Ajedrez</span><i>◇</i><span>Running</span><i>◇</i><span>Series psicológicas</span><i>◇</i><span>Notting Hill</span><i>◇</i><span>LoL</span><i>◇</i><span>Minecraft</span><i>◇</i><span>Final Fantasy</span><i>◇</i>
+          <span>Inteligencia artificial</span><i>◇</i><span>Python</span><i>◇</i><span>Batería</span><i>◇</i><span>Ajedrez</span><i>◇</i><span>Running</span><i>◇</i><span>Series psicológicas</span><i>◇</i><span>Notting Hill</span><i>◇</i><span>LoL</span><i>◇</i><span>Minecraft</span><i>◇</i><span>Final Fantasy</span><i>◇</i>
+        </div>
+      </div>
+
+      <p class="scrollhint" aria-hidden="true" data-i18n="hero.scroll"><span></span> desliza</p>
+    </section>
+
+    <!-- ===== 01 · PROYECTOS PERSONALES ===== -->
+    <section class="section" id="proyectos" aria-labelledby="h-proyectos">
+      <div class="wrap split">
+
+        <!-- Columna pegajosa -->
+        <div class="split__aside">
+          <p class="num">01</p>
+          <h2 class="h2 mask" id="h-proyectos" data-i18n="proj.title">Proyectos Personales</h2>
+          <hr class="rule">
+          <p class="aside-note" data-i18n="proj.note">Todo lo que desarrollo por cuenta propia, sin clase de por medio, desde la idea hasta el código que funciona.</p>
+          <!-- Lo que estoy aprendiendo ahora (reutiliza los estilos de la ficha) -->
+          <div class="learning">
+            <h3 class="ficha__title" data-i18n="learn.title">Aprendiendo ahora</h3>
+            <dl class="bento bento--sm">
+              <div class="widget" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.4 5.7 12 3z"/></svg></span><dt data-i18n="learn.dt.lang">Idioma</dt><dd data-i18n="learn.lang">Inglés C1</dd></div>
+              <div class="widget" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 21.5V4.5"/></svg></span><dt data-i18n="learn.dt.course">Curso</dt><dd>CS50 Python</dd></div>
+              <div class="widget w-2" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><dt data-i18n="learn.dt.cert">Certificación</dt><dd>UiPath Automation Developer Associate</dd></div>
+              <div class="widget w-2" data-tilt><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></span><dt data-i18n="learn.dt.dam">Ciclo DAM</dt><dd>HTML · CSS · JS · Java</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="split__main">
+          <!-- Tarjeta de proyecto -->
+          <article class="project widget widget--card reveal">
+            <div class="project__media" data-kenburns>
+              <img src="https://picsum.photos/seed/claudia-ai-assistant-interface/1200/800" alt="Interfaz de chat del agente de IA Débora" data-i18n-alt="proj.img.alt" loading="lazy">
+              <span class="project__badge" data-i18n="proj.badge">En desarrollo activo</span>
+            </div>
+
+            <header class="project__head">
+              <h3 class="h3" data-i18n="proj.h3">Agente de IA personal — <em>Débora IA</em></h3>
+              <p class="project__meta">
+                <span>Qwen 3.6 14B</span><span>·</span><span>Python</span><span>·</span><span>ElevenLabs</span><span>·</span><span data-i18n="proj.meta.gui">GUI propia</span>
+              </p>
+            </header>
+
+            <div class="project__body">
+              <p data-i18n="proj.body1">Desarrollo potenciado por la IA usando el modelo <strong>Qwen 3.6 14B</strong>. Débora fue optimizada y desarrollada con un objetivo claro: imitar a <em>Jarvis</em>, la IA de Tony Stark.</p>
+              <p data-i18n="proj.body2">Su <strong>System Prompt</strong> está optimizado para responder con más inteligencia emocional de la que permite su modelo base, y tiene una personalidad propia configurada con gustos y opiniones definidas. Desde hace poco también tiene avatar propio.</p>
+            </div>
+
+            <!-- Módulos -->
+            <ul class="modules bento bento--modules">
+              <li class="module widget" data-tilt>
+                <div class="module__top"><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></svg></span><span class="module__id">M-01</span></div>
+                <h4 class="h4" data-i18n="m1.t">Reconocimiento de voz</h4>
+                <p data-i18n="m1.p">Escucha mediante la API gratuita de ElevenLabs; la conversación no pasa por el teclado.</p>
+              </li>
+              <li class="module widget" data-tilt>
+                <div class="module__top"><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 8.5a5 5 0 0 1 0 7"/></svg></span><span class="module__id">M-02</span></div>
+                <h4 class="h4" data-i18n="m2.t">Módulo de habla</h4>
+                <p data-i18n="m2.p">Responde en voz alta con ElevenLabs. Tono y cadencia ajustados a su personalidad.</p>
+              </li>
+              <li class="module widget" data-tilt>
+                <div class="module__top"><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span class="module__id">M-03</span></div>
+                <h4 class="h4" data-i18n="m3.t">Interfaz de chat propia</h4>
+                <p data-i18n="m3.p">UI dedicada para hablar con ella fuera de la terminal, con historial y estados.</p>
+              </li>
+              <li class="module widget" data-tilt>
+                <div class="module__top"><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></span><span class="module__id">M-04</span></div>
+                <h4 class="h4">Google Services</h4>
+                <p data-i18n="m4.p">Control del ordenador para buscar en Google y poner vídeos de YouTube o canciones de YouTube Music.</p>
+              </li>
+              <li class="module widget w-2 module--soon" data-tilt>
+                <div class="module__top"><span class="w-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span><span class="module__id">M-05</span></div>
+                <h4 class="h4" data-i18n="m5.t">Vinculación con móviles</h4>
+                <p data-i18n="m5.p">Nuevo modelo de conexión con dispositivos móviles: <strong>en desarrollo</strong>.</p>
+              </li>
+            </ul>
+
+            <!-- Especificaciones -->
+            <dl class="specs bento bento--specs">
+              <div class="widget" data-tilt><dt data-i18n="dt.model">Modelo</dt><dd>Qwen 3.6 14B</dd></div>
+              <div class="widget" data-tilt><dt>Prompt</dt><dd data-i18n="spec.prompt">Optimizado en IE emocional</dd></div>
+              <div class="widget" data-tilt><dt data-i18n="dt.voice">Voz</dt><dd>ElevenLabs (STT + TTS)</dd></div>
+              <div class="widget" data-tilt><dt data-i18n="dt.actions">Acciones</dt><dd>Google · YouTube · YT Music</dd></div>
+              <div class="widget" data-tilt><dt data-i18n="dt.interface">Interfaz</dt><dd data-i18n="spec.interface">Chat propio</dd></div>
+              <div class="widget" data-tilt><dt data-i18n="dt.next">Siguiente hito</dt><dd data-i18n="spec.next">Puente móvil</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 · MI HISTORIA ===== -->
+    <section class="section section--snow" id="historia" aria-labelledby="h-historia">
+      <div class="spots" aria-hidden="true"><span class="spot" style="--x:91%;--y:54%;--s:220px;--rot:14deg"><span class="spot__hole"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#spot-b" filter="url(#spot-ink)"/></svg></span></span></div>
+      <div class="wrap">
+        <header class="section__head">
+          <p class="num">02</p>
+          <h2 class="h2 mask" id="h-historia" data-i18n="hist.title">Mi historia</h2>
+          <hr class="rule">
+          <p class="section__intro" data-i18n="hist.intro">La curiosidad que me trajo hasta aquí.</p>
+        </header>
+
+        <article class="story reveal">
+          <p class="story__lead" data-i18n="hist.p1">La historia de cómo me enamoré de la informática no es ningún cuento de hadas. Como la gran mayoría de niños, idolatraba a los superhéroes de las películas. Mi padre y yo éramos superfans de los Avengers, y recuerdo que después de ver <em>Avengers: La Era de Ultron</em> me obsesioné con Iron Man y su tecnología.</p>
+          <p data-i18n="hist.p2">Al llegar del colegio corría por toda la casa imaginándome que era Iron Man, hablando con Jarvis para que me trajera distintos trajes. Siempre soñé con las IAs, y con convertir los electrodomésticos en inteligentes.</p>
+
+          <blockquote class="pull widget widget--quote" data-i18n="hist.pull">«Jarvis, abre la nevera» — y la abría yo mismo, a mano.</blockquote>
+
+          <p data-i18n="hist.p3">Estuve mucho tiempo admirando a youtubers de robótica, intentando imitar la tecnología de Iron Man — una obsesión que, a medida que crecía, se fue olvidando. Después de <em>Vengadores: Endgame</em> no volví a soñar con crear mi propia tecnología, al menos hasta los 17.</p>
+          <p data-i18n="hist.p4">Una de mis aficiones más persistentes ha sido estar al día de las nuevas tecnologías. Fui de esos que se tragaban los vídeos falsos de 2016 de coches voladores o iPhones que levitaban al caer, pero también fui el primero de mi clase en usar ChatGPT para una tarea, cuando ni siquiera era un producto público de OpenAI.</p>
+          <p data-i18n="hist.p5">Me empecé a interesar por la informática curioseando con cada modelo de generación de imagen para hacer memes de profesores del instituto. ChatGPT se había convertido en mi nuevo mejor amigo insustituible — o por lo menos hasta que vi el primer vídeo de un agente de IA local. La obsesión había renacido y no podía esperar a tener mi propia IA. Al llegar a bachillerato, ChatGPT ya se había convertido en mi herramienta de cabecera para prácticamente todo.</p>
+          <p data-i18n="hist.p6">Mi ordenador tenía, por suerte, una gráfica de 12&nbsp;GB de VRAM — solo tenía que encontrar la mejor IA para vibecodear. <strong>Claude</strong> me acompañó en todo el desarrollo de mi propio agente personal, que terminé bautizando, tras una larga sesión de brainstorming, como <em>Débora IA</em>. Un proyecto que he pausado para aprender a fondo el desarrollo de software y de IA. Lo que empezó como un cosquilleo de «me podría dedicar a esto» acabó siendo un «sí, sí quiero».</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 03 · HOBBIES ===== -->
+    <section class="section" id="datos" aria-labelledby="h-datos">
+      <div class="spots" aria-hidden="true"><span class="spot" style="--x:6%;--y:82%;--s:200px;--rot:-6deg"><span class="spot__hole"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#spot-a" filter="url(#spot-ink)"/></svg></span></span></div>
+      <div class="wrap split">
+        <div class="split__aside">
+          <p class="num">03</p>
+          <h2 class="h2 mask" id="h-datos" data-i18n="hob.title">Hobbies</h2>
+          <hr class="rule">
+          <p class="aside-note" data-i18n="hob.note">Me gusta gastar el tiempo libre en aprender aficiones nuevas. He desarrollado muchas, de ámbitos muy distintos.</p>
+        </div>
+
+        <div class="split__main">
+          <!-- Pestañas -->
+          <div class="tabs seg" role="tablist" aria-label="Ámbitos" data-i18n-aria-label="hob.tabs.aria">
+            <button class="tab is-active" role="tab" aria-selected="true" aria-controls="p-musica" id="t-musica" data-i18n="tab.music">Música</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p-deporte" id="t-deporte" data-i18n="tab.sport">Deporte</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p-vjuegos" id="t-vjuegos" data-i18n="tab.games">Videojuegos</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="p-audiovisual" id="t-audiovisual" data-i18n="tab.av">Audiovisual</button>
+          </div>
+
+          <div class="panels widget widget--panel">
+            <!-- Panel: Música -->
+            <section class="panel is-active" role="tabpanel" id="p-musica" aria-labelledby="t-musica">
+              <h3 class="h3" data-i18n="music.h3">El piano de mi hermana</h3>
+              <p data-i18n="music.p">Desde muy pequeño tocaba el piano de mi hermana, y con el tiempo logré que me metieran a una extraescolar de <strong>batería con 11 años</strong>. Con la curiosidad insaciable acabé saltando a otros instrumentos:</p>
+              <ul class="chips" data-i18n="music.chips">
+                <li>Batería</li><li>Percusión general</li><li>Guitarra</li><li>Piano</li><li class="chip--new">Ukelele · el último en llegar</li>
+              </ul>
+            </section>
+
+            <!-- Panel: Deporte -->
+            <section class="panel" role="tabpanel" id="p-deporte" aria-labelledby="t-deporte" hidden>
+              <h3 class="h3" data-i18n="sport.h3">Deporte, sin mucha convicción al principio</h3>
+              <p data-i18n="sport.p1">De niño nunca fui bueno en el deporte: mis padres me metían el miedo de que me podían romper los huesos y nunca pedí que me metieran a ningún club. El primero que practiqué fue el <strong>ajedrez, en el club del colegio a los 6 años</strong>. Mucho después, con 14, descubrí lo entretenido que era hacer un rondo apenas salir del colegio con mis amigos, y mi curiosidad se transportó de la música al deporte.</p>
+              <p data-i18n="sport.p2">Empecé apuntándome a partidos amistosos de fútbol y después de baloncesto, y a practicar con mi padre los deportes que daba en Educación Física. A día de hoy he frenado esa obsesión y solo practico de forma rutinaria <strong>running y gimnasio</strong>.</p>
+            </section>
+
+            <!-- Panel: Videojuegos -->
+            <section class="panel" role="tabpanel" id="p-vjuegos" aria-labelledby="t-vjuegos" hidden>
+              <h3 class="h3" data-i18n="games.h3">Competitivo, relajante o de 100 horas</h3>
+              <p data-i18n="games.p">También dejo momentos libres para gastar en cosas con menos retorno: videojuegos competitivos como <strong>LoL</strong> o más relajantes como <strong>Minecraft</strong>. Y cuando tengo mucho tiempo para quemar, me termino un <strong>Final Fantasy</strong>.</p>
+              <ul class="chips">
+                <li>League of Legends</li><li>Minecraft</li><li>Final Fantasy</li>
+              </ul>
+            </section>
+
+            <!-- Panel: Audiovisual -->
+            <section class="panel" role="tabpanel" id="p-audiovisual" aria-labelledby="t-audiovisual" hidden>
+              <h3 class="h3" data-i18n="av.h3">Lo que siempre acabo debatiendo con amigos</h3>
+              <p data-i18n="av.p1">Algo que suelo comentar y debatir son los gustos audiovisuales. A mí, personalmente, me gustan las <strong>series psicológicas con gran evolución de personaje</strong>, para ver un domingo de maratón de temporada. Un ejemplo de ese estilo es mi serie favorita: <em>The Lost</em>.</p>
+              <p data-i18n="av.p2">En películas soy algo diferente: adoro las románticas al estilo <em>Notting Hill</em> o las que tienen una trama romántica consistente como <em>The Wild Hunting</em>.</p>
+              <ul class="chips" data-i18n="av.chips">
+                <li>Series psicológicas</li><li>The Lost</li><li>Notting Hill</li><li>The Wild Hunting</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 · AMBICIONES A FUTURO ===== -->
+    <section class="section section--snow" id="ambiciones" aria-labelledby="h-ambiciones">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="num">04</p>
+          <h2 class="h2 mask" id="h-ambiciones" data-i18n="amb.title">Ambiciones a futuro</h2>
+          <hr class="rule">
+        </header>
+
+        <div class="ambition reveal">
+          <p class="ambition__lead" data-i18n="amb.lead">Ahora mismo termino el ciclo de <strong>DAM</strong>, que quiero culminar con la especialización en <em>Big Data e IA</em> — para, finalmente, poder dar soluciones al mundo con automatización e inteligencia artificial.</p>
+          <ul class="ambition__list bento bento--3">
+            <li class="widget" data-tilt data-i18n="amb.l1"><span class="ambition__mark">01</span> Ampliar Débora IA</li>
+            <li class="widget" data-tilt><span class="ambition__mark">02</span> Hyperautomation Projects</li>
+            <li class="widget" data-tilt data-i18n="amb.l3"><span class="ambition__mark">03</span> Mi startup</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA · CONTACTO ===== -->
+  <footer class="footer" id="contacto">
+    <!-- data-secret="code": debajo de ESTA mancha vive el código, pero solo existe en modo oscuro
+         (ver .secret-code en style.css) — aparta la tinta con el ratón para leerlo. -->
+    <div class="spots" aria-hidden="true"><span class="spot" data-secret="code" style="--x:84%;--y:30%;--s:280px;--rot:8deg"><span class="secret-code" aria-hidden="true">bad_time</span><span class="spot__hole"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#spot-b" filter="url(#spot-ink)"/></svg></span></span></div>
+    <div class="wrap footer__grid">
+
+      <div class="footer__lead">
+        <p class="eyebrow" data-i18n="foot.eyebrow"><span class="eyebrow__tick" aria-hidden="true"></span> Contacto</p>
+        <!-- Título de cierre -->
+        <h2 class="footer__title mask" data-i18n="foot.title">Hablemos de<br><em>proyectos</em></h2>
+        <p class="footer__text" data-i18n="foot.text">Disponible para hablar de IA, de código, de batería o de qué serie toca el domingo.</p>
+        <a href="contacto.html" class="btn btn--solid footer__cta" data-i18n="hero.cta.contact">Escríbeme <span aria-hidden="true">→</span></a>
+      </div>
+
+      <!-- Enlaces directos: solo estos dos (el resto del contacto es el correo de abajo) -->
+      <nav class="footer__links" aria-label="Enlaces de contacto" data-i18n-aria-label="foot.nav.aria">
+        <h3 class="footer__sub" data-i18n="foot.links">Redes</h3>
+        <div class="flinks">
+        <a href="#" class="flink widget" data-tilt><span>GitHub</span><i aria-hidden="true">↗</i></a>
+        <a href="#" class="flink widget" data-tilt><span>LinkedIn</span><i aria-hidden="true">↗</i></a>
+        </div>
+      </nav>
+
+      <!-- Datos legales / meta -->
+      <div class="footer__meta widget" data-tilt>
+        <h3 class="footer__sub" data-i18n="foot.meta">Meta</h3>
+        <p><span data-i18n="meta.school">Centro</span> IES Simarro</p>
+        <p><span data-i18n="meta.course">Ciclo</span> 1º DAM</p>
+        <p><span data-i18n="meta.zone">Zona</span> <b class="mv">GMT+1 · <span id="clock2">--:--</span></b></p>
+        <p class="footer__status" data-i18n="foot.status"><span class="pulse"></span> Respondiendo en 24 h</p>
+      </div>
+    </div>
+
+    <div class="wrap footer__bottom">
+      <p>© <span id="year">2025</span> David Abraham Alba Rivero — <span data-i18n="foot.made">hecho con HTML, CSS y JS puros.</span></p>
+      <a href="#inicio" class="totop" data-i18n="foot.top">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+
+    <!-- Terminal secreta: solo en escritorio (ver secret-hunt.js). Cualquier texto que no
+         sea el código exacto se rechaza con un fallo estilo glitch. -->
+    <div class="wrap">
+      <div class="secret-term" id="secretTerm" aria-label="Terminal">
+        <div class="secret-term__bar"><span></span><span></span><span></span> root@localhost</div>
+        <div class="secret-term__log" id="termLog"></div>
+        <div class="secret-term__row"><span aria-hidden="true">&gt;</span> <input id="termInput" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input" placeholder="type a command…"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script src="spots.js"></script>
+  <script src="secret-hunt.js"></script>
+  <script src="widgets.js"></script>
+</body>
+</html>

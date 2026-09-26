@@ -1,0 +1,7 @@
+# Configuración local de Claude Code (tiene rutas de este PC)
+.claude/
+
+# Basura del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
