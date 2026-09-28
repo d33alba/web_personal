@@ -1,6 +1,9 @@
 # Configuración local de Claude Code (tiene rutas de este PC)
 .claude/
 
+# Capturas para comparar versiones (solo en este PC, no se suben)
+screenshots/
+
 # Basura del sistema
 Thumbs.db
 desktop.ini
